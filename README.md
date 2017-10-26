@@ -9,5 +9,6 @@ From this page you'll see the steps required to connect as well as the info you 
 In this Repo, in the folder named IoP, you'll find a template to help you get started even faster. 
 
 ## Hardware Required
-<script src="https://www.sparkfun.com/wish_lists/142042.js"></script>
+http://sfe.io/w142042
 You will also need hook-up wire, soldering iron and solder, a power supply, plastic wrap for the temp sensors, and heat shrink. 
+
