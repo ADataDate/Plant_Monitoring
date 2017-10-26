@@ -1,4 +1,4 @@
-#include <OneWire.h> //Library for the DS18B20 One-wire temp sensor 
+//Add addiotnal libraries as needed. 
 #include <Wire.h>
 #include <SPI.h>
 #include <Client.h>
