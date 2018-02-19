@@ -59,38 +59,10 @@ void setup() {
   Cayenne.begin(username, password, clientID, ssid, wifiPassword);
   Serial.println("Internet of Plants!!!");
 
-  #if 0 
-  //CCS811 Air Quality Sensor Set Up
-  CCS811Core::status returnCode = mySensor.begin();
-  if (returnCode != CCS811Core::SENSOR_SUCCESS)
-  {
-    Serial.println(".begin() returned with an error.");
-    while (1); //Hang if there was a problem.
-  }
-  CCS811Core::status disableInterrupts(void);
-  #endif
+ 
 
 
-  //SX1509 Set Up
-  if (!io.begin(SX1509_ADDRESS))
-  {
-    while (1) ; // If we fail to communicate, loop forever.
-    Serial.println("SX1509 Fail");
-  }
-  
-  // Call io.pinMode(<pin>, <mode>) to set an SX1509 pin as
-  // an output:
-  io.pinMode(SX1509_PWR_SM1, OUTPUT);
-  io.pinMode(SX1509_PWR_SM2, OUTPUT);
-  io.pinMode(SX1509_PWR_SM3, OUTPUT);
-  io.pinMode(SX1509_PWR_SM4, OUTPUT);
-  io.pinMode(SX1509_PWR_SM5, OUTPUT);
-
-  io.digitalWrite(SX1509_PWR_SM1, LOW);
-  io.digitalWrite(SX1509_PWR_SM2, LOW);
-  io.digitalWrite(SX1509_PWR_SM3, LOW);
-  io.digitalWrite(SX1509_PWR_SM4, LOW);
-  io.digitalWrite(SX1509_PWR_SM5, LOW);
+  /
   
 
   //Analog MUX set up:
@@ -108,26 +80,9 @@ void setup() {
 
 void loop() {
   Cayenne.loop();
-  #if 0 
-  float readCO2 = 0.0f;
-  float readTVOC = 0.0f;
-  
-  //Get C02 and tVOC from CCS811 Sensor
-  if (mySensor.dataAvailable())
-  {
-    mySensor.readAlgorithmResults();
-    readCO2 = mySensor.getCO2(); //Send this to Cayenne
-    readTVOC = mySensor.getTVOC(); //Send this to Cayenne
-    delay(10); 
-  }
-  #endif
 
 
-  //Get light levels 
-  int LIGHT = readMux(10);
-  delay(500);
-  Serial.print("light level:  ");
-  Serial.println(LIGHT);
+
 
   //Get Soil Moisture Readings
   //The Soil Moisture Sensors are powered by the output pin on the IO Expander
