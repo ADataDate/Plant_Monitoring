@@ -6,12 +6,12 @@ Create an account with MyDevices: https://mydevices.com/
 Once you have created an account, click on `All Devices` and select the SparkFun ESP8266 Thing Dev Board. 
 From this page you'll see the steps required to connect as well as the info you need in your Arduino Sketch like the MQTT username and password, Client ID, server and port info and you can also name your board.
 
-##Steps to Connect 
+## Steps to Connect 
 Install Arduino if you haven't done so already: https://www.arduino.cc/en/Main/Software 
 Install the FTDI drivers: https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers
 
 
-###Install the ESP8266 Thing Dev Board add-on for Arduino
+### Install the ESP8266 Thing Dev Board add-on for Arduino
 To begin, you’ll need to point the Arduino IDE board manager to a custom URL. Open up Arduino, then go to the Preferences (File > Preferences). Then, towards the bottom of the window, paste this URL into the “Additional Board Manager URLs” text box: - http://arduino.esp8266.com/stable/package_esp8266com_index.json 
 
 You can add multiple URLs by clicking the window icon, and pasting in one URL per line. Hit OK, then navigate to the Board Manager by going to Tools > Boards > Boards Manager. Look for esp8266 by ESP8266 Comunity. Click on that entry, then select Install. Once the installation has completed, an Arduino-blue “INSTALLED” will appear next to the entry.
@@ -21,29 +21,29 @@ To select the ESP8266 Thing Dev board as your device navigate to Tools>Board:  >
 
 The next step is to add the Library that allows Arduino to talk to Cayenne. Go to Sketch > Include Library > Manage Libraries a menu will pop-up. Allow the Library Manager to update and then search for “Cayenne”. Select “Cayeen-MQTT-ESP8266”  and install. If this doesn't work see below. 
 
-###Manual Install of Cayenne MQTT for ESP8266
--> <!-- button(Download the Project Libraries!, https://cdn.sparkfun.com/assets/learn_tutorials/6/8/3/Cayenne-MQTT-ESP8266-master.zip) --> <-
+### Manual Install of Cayenne MQTT for ESP8266
+Download this ZIP file found in the repo under Template. 
 Install the downloaded zip library from Sketch -> Include Library -> Add .ZIP Library.
 Connect your ESP module to your computer using a USB to Serial FTDI or console cable.
 Select your ESP module and port from the Tools menu.
 
-##Get and Push Your Plant Data
+## Get and Push Your Plant Data
 
-###Wifi
+### Wifi
 Open the Arduino IDE, have the ESP8266 Thing Dev board selected along with the correct serial port and the library installed. Look through the sketch and find "//WiFi Network info". Enter the SSID and WiFi password inside the brackets. 
 
-###Cayenne Authentication, Compile and Upload
+### Cayenne Authentication, Compile and Upload
 Scroll through the sketch and look for "//Cayenne Authentication info." Inset the username, password and client ID given on your Cayenne Account page (connect your device). One this is all finished click on the check mark buton at the top lef hand of the screen and see if it compiles. If not, let an instructor know. If everything is good click on the right arrow button at the top left and see if you program has uploaded to the devices. Wait a few minutes and check yor account on Cayenne as you should see the number of miliseconds your device has been running as well as a random-value (floating pin) for the soil moisture - Next we need to connect hardware.  
 
 
-##Hardware
+### Hardware
 Part of this workshop will be setting up the hardware. Just hold on. "Hold on for one more dayee"
 
 
 Once your project is up and running - navigate to the user menu on the top right side of the  window and slect `Triggers and Alerts`. Add a new trigger by naming it and then dragging the board name on the left side of the window into the `if` box. 
 Then click on the `then` box and set up your email or phone number. When the event you choose happens you'll either get an email or a text message! 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Why IoT??
+### Why IoT??
 
 The seamlessness of fitness trackers are a good starting point for answering this question. I can wear a device and it will log all sorts of biometric data 
 which I can then parse through in a meaningful-graphical way and even storeon my phone or personal computer. I can update the way I live my life based on real-time data 
