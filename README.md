@@ -37,11 +37,10 @@ Scroll through the sketch and look for "//Cayenne Authentication info." Inset th
 
 
 ### Hardware
-Part of this workshop will be setting up the hardware. Just hold on. "Hold on for one more dayee"
-
-
-Once your project is up and running - navigate to the user menu on the top right side of the  window and slect `Triggers and Alerts`. Add a new trigger by naming it and then dragging the board name on the left side of the window into the `if` box. 
+Part of this workshop will be setting up the hardware. Just hold on. "Hold on for one more dayee". Once your project is up and running - navigate to the user menu on the top right side of the  window and slect `Triggers and Alerts`. Add a new trigger by naming it and then dragging the board name on the left side of the window into the `if` box. 
 Then click on the `then` box and set up your email or phone number. When the event you choose happens you'll either get an email or a text message! 
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Why IoT??
 
