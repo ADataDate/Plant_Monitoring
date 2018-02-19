@@ -49,14 +49,6 @@ void setup() {
 void loop() {
   Cayenne.loop();
 
- 
-
-  //Publish data every  2 minutes (120000 milliseconds). Change this value to publish at a different interval.
-  if (millis() - lastMillis > 120000) {
-    lastMillis = millis();
-    //Write data to Cayenne here. This example just sends the current uptime in milliseconds.
-    Cayenne.virtualWrite(0, lastMillis);
-
     //Set PWR for Soil Moisture Sensor high, take a reading, set PWR Low
     //View data on serial monitor and then publish data to Cayenne's platform. 
     digitalWrite(PWR, HIGH);
@@ -69,7 +61,11 @@ void loop() {
     Serial.print("Soil Moisture Level: ");
     Serial.print(SoilMoisture);
 
-    //Publish to Cayenne
+  //Publish data every  2 minutes (120000 milliseconds). Change this value to publish at a different interval.
+  if (millis() - lastMillis > 120000) {
+    lastMillis = millis();
+    //Write data to Cayenne here. This example just sends the current uptime in milliseconds.
+    Cayenne.virtualWrite(0, lastMillis);
     Cayenne.virtualWrite(1, SoilMoisture);
   }
 }
