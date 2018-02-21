@@ -1,5 +1,5 @@
-# Plant_Monitoring
-IoT project sensin the status of your plant's soil moisture level leaveraging Cayenne, an IOT platform,  as well as some SparkFun hardware. 
+# IoT Plant Monitoring
+An IoT introductory project, sensing the status of your plant's soil moisture level, leaveraging Cayenne, an IOT platform,  as well as some SparkFun hardware. 
 
 ## Getting Started
 Create an account with MyDevices: https://mydevices.com/
